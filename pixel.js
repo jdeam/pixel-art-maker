@@ -2,6 +2,7 @@ let selectedColor = 'empty';
 let brushActive = false;
 let body = document.querySelector('body');
 let palette = document.querySelector('.palette-box');
+let pixelBox = document.querySelector('.pixel-box');
 let pixels = document.querySelector('.pixel-box').childNodes;
 
 function pickColor() {
@@ -18,11 +19,14 @@ function pickColor() {
   }
 }
 
-function colorSinglePixel() {
+function colorSinglePixel(event) {
+  if (event.target.classList.contains('pixel-box')) {
+    return;
+  }
   if (event.target.classList.contains(selectedColor)) {
-    this.classList = 'empty';
+    event.target.classList = 'empty';
   } else {
-    this.classList = selectedColor;
+    event.target.classList = selectedColor;
   }
 }
 
@@ -34,9 +38,12 @@ function deactivateBrush() {
   brushActive = false;
 }
 
-function colorPixels() {
+function colorPixels(event) {
+  if (event.target.classList.contains('pixel-box')) {
+    return;
+  }
   if (brushActive) {
-    this.classList = selectedColor;
+    event.target.classList = selectedColor;
   }
 }
 
@@ -46,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   palette.addEventListener('click', pickColor);
   pixels.forEach(function(pixel) {
     pixel.classList='empty';
-    pixel.addEventListener('click', colorSinglePixel);
-    pixel.addEventListener('mouseenter', colorPixels, true);
   });
+  pixelBox.addEventListener('click', colorSinglePixel);
+  pixelBox.addEventListener('mouseenter', colorPixels, true);
 });
