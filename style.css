@@ -22,6 +22,9 @@
 .pixel-box>div {
   height: 6.25%;
   width: 6.25%;
+}
+
+.empty {
   border: 1px solid whitesmoke;
 }
 
