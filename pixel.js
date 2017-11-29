@@ -51,5 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
     pixel.addEventListener('click', colorSinglePixel);
     pixel.addEventListener('mouseenter', colorPixels, true);
   });
-
 });
