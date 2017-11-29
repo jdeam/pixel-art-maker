@@ -22,27 +22,7 @@
 .pixel-box>div {
   height: 6.25%;
   width: 6.25%;
-  border: 1px solid darkgray;
-}
-
-.one {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.two {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.three {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.four {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  border: 1px solid whitesmoke;
 }
 
 .palette-box {
@@ -56,7 +36,6 @@
 .color {
   height: 50px;
   width: 50px;
-  border: 1px solid darkgray;
 }
 
 .red {
@@ -108,5 +87,5 @@
 }
 
 .selected {
-  border: 3px solid black;
+  border: 2px solid black;
 }
