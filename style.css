@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pixel-box {
+  height: 600px;
+  width: 600px;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pixel-box>div {
+  height: 6.25%;
+  width: 6.25%;
+  border: 1px solid darkgray;
+}
+
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.two {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.three {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.four {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.palette-box {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+  border: 1px solid darkgray;
+}
+
+.red {
+  background-color: #EB3223;
+}
+
+.red-orange {
+  background-color: #ED5528;
+}
+
+.orange {
+  background-color: #EF8433;
+}
+
+.yellow-orange {
+  background-color: #F5B440;
+}
+
+.yellow {
+  background-color: #FBDF4C;
+}
+
+.yellow-green {
+  background-color: #8ABE55;
+}
+
+.green {
+  background-color: #49A159;
+}
+
+.blue-green {
+  background-color: #49A69A;
+}
+
+.blue {
+  background-color: #005AF7;
+}
+
+.blue-violet {
+  background-color: #67249E;
+}
+
+.violet {
+  background-color: #AB39F3;
+}
+
+.red-violet {
+  background-color: #BA31AA;
+}
+
+.selected {
+  border: 3px solid black;
+}
